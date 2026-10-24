@@ -33,7 +33,7 @@ class ChangelogActivity : GenericActivity() {
         get() = if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean("changelog_load", true)) {
             Changelog(Jsoup.parse(xml, "", Parser.xmlParser()))
         } else {
-            Changelog(Jsoup.connect("https://raw.githubusercontent.com/jordyamc/UKIKU/master/app/src/main/assets/changelog.xml").parser(Parser.xmlParser()).get())
+            Changelog(Jsoup.connect("https://raw.githubusercontent.com/Goenji007/UKIKU-/master/app/src/main/assets/changelog.xml").parser(Parser.xmlParser()).get())
         }
 
     private val xml: String?
