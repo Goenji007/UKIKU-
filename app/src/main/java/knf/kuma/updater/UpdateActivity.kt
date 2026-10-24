@@ -59,7 +59,7 @@ class UpdateActivity : GenericActivity() {
     }
 
     private fun start() {
-        updaterViewModel.start(update, "https://github.com/jordyamc/UKIKU/raw/master/app/$getUpdateDir/app-$getUpdateDir.apk")
+        updaterViewModel.start(update, "https://github.com/Goenji007/UKIKU-/raw/master/app/$getUpdateDir/app-$getUpdateDir.apk")
             .observe(this, Observer {
                 when (it.first) {
                     UpdaterType.TYPE_IDLE -> {

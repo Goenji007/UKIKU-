@@ -21,7 +21,7 @@ object StaffRecommendations {
                 if (cached.exists()) {
                     cached.readText()
                 } else {
-                    URL("https://cdn.statically.io/gh/jordyamc/UKIKU@master/static_data/suggestions.json").readText().also {
+                    URL("https://cdn.statically.io/gh/Goenji007/UKIKU-@master/static_data/suggestions.json").readText().also {
                         cached.writeText(it)
                     }
                 }

@@ -104,7 +104,7 @@ class MigrationActivity: GenericActivity() {
             if (PrefsUtil.isAV1MigrateDirectoryFinished) return@withContext
             (0..12).forEach {
                 setState("Cargando directorio ${it+1}/13")
-                val data = URL("https://cdn.jsdelivr.net/gh/jordyamc/UKIKU@master/static_data/migration/directory_$it.json").readText()
+                val data = URL("https://cdn.jsdelivr.net/gh/Goenji007/UKIKU-@master/static_data/migration/directory_$it.json").readText()
                 val list = Gson().fromJson<List<DirectoryAV1>>(data, object :TypeToken<List<DirectoryAV1>>(){}.type)
                 CacheDB.INSTANCE.directoryDAO().addAll(list)
                 delay(300.milliseconds)
@@ -117,7 +117,7 @@ class MigrationActivity: GenericActivity() {
         return withContext(Dispatchers.IO) {
             setState("Cargando definiciones...")
             try {
-                val data = URL("https://cdn.jsdelivr.net/gh/jordyamc/UKIKU@master/static_data/migration/migration-table.json").readText()
+                val data = URL("https://cdn.jsdelivr.net/gh/Goenji007/UKIKU-@master/static_data/migration/migration-table.json").readText()
                 JSONObject(data)
             } catch (e: Exception) {
                 e.printStackTrace()

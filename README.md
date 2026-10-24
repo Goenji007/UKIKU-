@@ -1,3 +1,10 @@
+# UKIKU — fork personal de Goenji007
+
+Fork personal de [jordyamc/UKIKU](https://github.com/jordyamc/UKIKU) bajo licencia MIT, creado con fines de aprendizaje y uso personal.
+**Fase 0 (identidad propia):** la actualización automática, el changelog y los datos remotos apuntan a este fork; `applicationId` propio (`com.goenji007.ukiku`, puede coexistir con la app original); versión 6.0.8-goenji.1 (código 239); enlaces de donación y redes del autor retirados de la pantalla «Acerca de». Crédito del proyecto original: Jordy Alexis Mendoza Caballero.
+
+---
+
 ![](https://github.com/jordyamc/UKIKU/blob/master/web/img/UKIKU%20Facebook.png)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4f8228880e0a4d3da8ee1c861801e5bf)](https://app.codacy.com/app/jordyamc/UKIKU?utm_source=github.com&utm_medium=referral&utm_content=jordyamc/UKIKU&utm_campaign=Badge_Grade_Dashboard)

@@ -24,7 +24,7 @@ class UpdateWork(val context: Context, workerParameters: WorkerParameters) : Wor
         if (Network.isConnected && isFullMode)
             try {
                 val document =
-                    Jsoup.connect("https://raw.githubusercontent.com/jordyamc/UKIKU/master/version.num")
+                    Jsoup.connect("https://raw.githubusercontent.com/Goenji007/UKIKU-/master/version.num")
                         .get()
                 val nCode =
                     Integer.parseInt(document.select("body").first().ownText().trim { it <= ' ' })

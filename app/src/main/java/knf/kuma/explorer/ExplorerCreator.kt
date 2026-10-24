@@ -104,7 +104,7 @@ object ExplorerCreator {
                     slugsTableFile.readText()
                 } else {
                     slugsTableFile.createNewFile()
-                    URL("https://cdn.jsdelivr.net/gh/jordyamc/UKIKU@master/static_data/migration/slugs-table.json").readText().also {
+                    URL("https://cdn.jsdelivr.net/gh/Goenji007/UKIKU-@master/static_data/migration/slugs-table.json").readText().also {
                         slugsTableFile.writeText(it)
                     }
                 }

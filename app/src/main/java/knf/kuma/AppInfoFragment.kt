@@ -33,19 +33,6 @@ import knf.tools.kprobability.probabilityOf
 import org.jetbrains.anko.support.v4.toast
 
 class AppInfoFragment: MaterialAboutFragment() {
-    private val paypalUri: Uri
-        get() {
-            val uriBuilder = Uri.Builder()
-            uriBuilder.scheme("https").authority("www.paypal.com").path("cgi-bin/webscr")
-            uriBuilder.appendQueryParameter("cmd", "_donations")
-            uriBuilder.appendQueryParameter("business", "jordyamc@hotmail.com")
-            uriBuilder.appendQueryParameter("lc", "US")
-            uriBuilder.appendQueryParameter("item_name", "Donación UKIKU")
-            uriBuilder.appendQueryParameter("no_note", "1")
-            uriBuilder.appendQueryParameter("no_shipping", "1")
-            uriBuilder.appendQueryParameter("currency_code", "USD")
-            return uriBuilder.build()
-        }
 
     private val isFlat: Boolean by lazy { requireArguments().getBoolean("isFlat",true) }
     private val rewardedAd: FullscreenAdLoader by lazy { getFAdLoaderRewarded(requireActivity()) }
@@ -106,48 +93,6 @@ class AppInfoFragment: MaterialAboutFragment() {
         if (isFullMode) {
             donateCard.outline(isFlat)
             donateCard.title("Donar")
-            donateCard.addItem(
-                ConvenienceBuilder.createWebsiteActionItem(
-                    requireContext(),
-                    getDrawable(requireContext(), R.drawable.ic_paypal),
-                    "Paypal",
-                    false,
-                    "https://www.paypal.com/donate/?hosted_button_id=9WXSCG3AP639J".toUri()
-                )
-            )
-            donateCard.addItem(
-                ConvenienceBuilder.createWebsiteActionItem(
-                    requireContext(),
-                    getDrawable(requireContext(), R.drawable.ic_bitcoin),
-                    "Binance",
-                    false,
-                    "https://app.binance.com/uni-qr/4ARGHuhS".toUri()
-                )
-            )
-            donateCard.addItem(
-                ConvenienceBuilder.createWebsiteActionItem(
-                    requireContext(),
-                    getDrawable(requireContext(), R.drawable.ic_patreon),
-                    "Patreon",
-                    false,
-                    "https://www.patreon.com/animeflvapp".toUri()
-                )
-            )
-            donateCard.addItem(
-                ConvenienceBuilder.createWebsiteActionItem(
-                    requireContext(),
-                    getDrawable(requireContext(), R.drawable.ic_cuplogo),
-                    "Ko-fi",
-                    false,
-                    "https://ko-fi.com/unbarredstream".toUri()
-                )
-            )
-            donateCard.addItem(
-                MaterialAboutActionItem.Builder().text("Ver anuncio")
-                    .subText("Vistos: ${PrefsUtil.userRewardedVideoCount}").icon(R.drawable.ic_cash)
-                    .setOnClickAction {
-                        showAd()
-                    }.build().also { videoItem = it })
         }
         val extraCard = MaterialAboutCard.Builder()
         extraCard.outline(isFlat)
@@ -164,46 +109,10 @@ class AppInfoFragment: MaterialAboutFragment() {
         extraCard.addItem(
             ConvenienceBuilder.createWebsiteActionItem(
                 requireContext(),
-                getDrawable(requireContext(), R.drawable.ic_web),
-                "Politica de privacidad",
-                true,
-                "https://ukiku.app/policy.html".toUri()
-            )
-        )
-        extraCard.addItem(
-            ConvenienceBuilder.createWebsiteActionItem(
-                requireContext(),
                 getDrawable(requireContext(), R.drawable.ic_github),
                 "Proyecto en github",
                 true,
-                "https://github.com/jordyamc/UKIKU".toUri()
-            )
-        )
-        extraCard.addItem(
-            ConvenienceBuilder.createWebsiteActionItem(
-                requireContext(),
-                getDrawable(requireContext(), R.drawable.ic_twitter),
-                "Twitter (X)",
-                false,
-                "https://x.com/AppsKnf".toUri()
-            )
-        )
-        extraCard.addItem(
-            ConvenienceBuilder.createWebsiteActionItem(
-                requireContext(),
-                getDrawable(requireContext(), R.drawable.ic_discord),
-                "Discord",
-                false,
-                "https://discord.gg/6hzpua6".toUri()
-            )
-        )
-        extraCard.addItem(
-            ConvenienceBuilder.createWebsiteActionItem(
-                requireContext(),
-                getDrawable(requireContext(), R.drawable.ic_beta),
-                "Grupo Beta",
-                false,
-                "https://t.me/ukiku_group".toUri()
+                "https://github.com/Goenji007/UKIKU-".toUri()
             )
         )
         extraCard.addItem(
