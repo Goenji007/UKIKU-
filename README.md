@@ -1,7 +1,7 @@
-# UKIKU — fork personal de Goenji007
+# YORUMI — fork personal de Goenji007 (basado en UKIKU)
 
 Fork personal de [jordyamc/UKIKU](https://github.com/jordyamc/UKIKU) bajo licencia MIT, creado con fines de aprendizaje y uso personal.
-**Fase 0 (identidad propia):** la actualización automática, el changelog y los datos remotos apuntan a este fork; `applicationId` propio (`com.goenji007.ukiku`, puede coexistir con la app original); versión 6.0.8-goenji.1 (código 239); enlaces de donación y redes del autor retirados de la pantalla «Acerca de». Crédito del proyecto original: Jordy Alexis Mendoza Caballero.
+**Fase 0 (identidad propia):** la actualización automática, el changelog y los datos remotos apuntan a este fork; `applicationId` propio (`com.goenji007.yorumi`, puede coexistir con la app original); nombre visible **YORUMI**; versión 6.0.8-yorumi.1 (código 240); enlaces de donación y redes del autor retirados de la pantalla «Acerca de». Crédito del proyecto original: Jordy Alexis Mendoza Caballero.
 
 ---
 

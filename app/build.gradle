@@ -10,11 +10,11 @@ localProperties.load(new FileInputStream(rootProject.file("local.properties")))
 android {
     compileSdk 36
     defaultConfig {
-        applicationId "com.goenji007.ukiku"
+        applicationId "com.goenji007.yorumi"
         minSdkVersion 26
         targetSdkVersion 36
-        versionCode 239
-        versionName "6.0.8-goenji.1"
+        versionCode 240
+        versionName "6.0.8-yorumi.1"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         javaCompileOptions {
